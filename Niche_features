@@ -1,0 +1,26 @@
+What makes it stand out
+
+The closed loop is your strongest point. Many teams will show detect and alert. Fewer will show detect, push an OTA fix, and watch health recover on screen. That loop (sense, cloud twin, diagnose, OTA back to the ECU) is the "software-defined" story the challenge is asking for, so keep it central in the demo.
+
+The virtual sensor is your second strongest point. Estimating a temperature the vehicle has no sensor for is a concrete ECU-side benefit: it can save hardware cost and enable earlier detection. Say this out loud, because judges may otherwise see the project as just a dashboard.
+
+Be honest about the weak spot. "Predictive maintenance on simulated data" is a common idea. Your edge has to come from the story and the loop, not the model. Don't oversell accuracy, and state that the data is simulated and how real logs would validate it. Judges tend to trust teams that say this upfront.
+
+Features that would add the most
+
+I've ordered these by impact against effort, and each is small enough to build with AI help.
+
+Fleet-aware false alarm suppression. Show a hot-weather day where every vehicle's temperature rises, and the system correctly does not alarm, while the one worn pump still does. This proves the fleet-data enabler in a way judges can see. It is a few lines on top of Phase 3.
+Business value counter. A card on the dashboard estimating avoided breakdowns, workshop visits saved and warranty cost avoided. Use clearly labeled assumptions, such as [assumed cost per breakdown], not invented statistics. This answers "so what?" for the judges.
+"What changed" explanation. Alongside the alert, show which signals drove it (for example, coolant 6 °C above expected at the same load). It makes the diagnosis trustworthy and is easy to add.
+Safe OTA flow. Before applying the update, show a simulated validation step (a quick check that the new parameters keep temperatures in limits), a rollback option, and the OTA log. Automotive judges care about safety, and this costs little.
+Driver-facing view. A small phone-style screen with a plain message: "Cooling system needs attention in ~3 weeks. A software update is available." It shows customer value from the driver's side, not only the engineer's.
+Natural-language assistant (optional). A small box on the dashboard: "Why is EV-11 amber?" answered from the diagnostics data. It links nicely to Challenge 5 and gives a wow moment, but only add it after the core demo works.
+Model improvement chart. The v1 to v2 comparison from Phase 7, shown as a simple before/after number. It makes "continuous learning" concrete.
+What I would not add
+
+Extra subsystems, deep learning models or real-time streaming infrastructure. Each adds risk and the demo gets harder to explain. A narrow scope that works every time beats a broad one that half works.
+
+How I'd prioritize if time is short
+
+Do features 1, 2 and 4 on top of the core build. Together they cover fleet data, customer value and safety, which are the three things judges are most likely to probe.
